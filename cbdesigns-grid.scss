@@ -1,0 +1,256 @@
+/* ==========================================================================
+ CB DESIGNS GRIDS
+ ========================================================================== */
+
+
+
+
+/* 
+ GRID VARIABLES
+ ========================================================================== */
+
+
+/**
+* Set the spacing between your grid items.
+*/
+$gutter:                24px !default;
+
+
+/**
+* Set the breakpoints for the grid.
+*/
+$small-width:           "(max-width: 767px)";
+$medium-width:          "(min-width: 768px) and (max-width: 1023px)";
+$large-width:           "(min-width: 1024px)";
+
+
+
+
+/* 
+   GRID SETUP
+   ========================================================================== */
+
+
+/**
+ * Apply a natural box layout model to all elements, but allowing components to
+ * change. Also required to combine fluid widths and fixed gutters.
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ * 4. Hack so columns correctly stack side-by-side.
+ */
+.grid {
+  list-style: none;/* [1] */
+  margin: 0;/* [2] */
+  padding: 0;/* [2] */
+  margin-left: -$gutter;/* [3] */
+  letter-spacing:-0.31em;/* [4] */
+}
+
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Resets the 'letter-spacing' set on grid element.
+ */
+.grid__item {
+  display: inline-block;/* [1] */
+  padding-left: $gutter;/* [2] */
+  vertical-align: top;/* [3] */
+  width: 100%;/* [4] */
+  letter-spacing:normal;/* [5] */
+  word-spacing:normal;/* [5] */
+} 
+
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+.grid--middle {
+  
+  > .grid__item {
+    vertical-align: middle
+  }
+}
+
+.grid--bottom {
+    
+    >.grid__item {
+      vertical-align: bottom
+    }
+}
+
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.grid--center {
+    text-align:center;
+
+    > .grid__item {
+        text-align:left;
+    }
+}
+
+
+
+
+/* 
+   COLUMN WIDTHS
+   ========================================================================== */
+
+
+/**
+ * Large Grid
+ */
+@media #{$large-width} {
+  
+  /**
+   * Halves
+   */
+  .one-half          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  .one-third         { width:33.333%; }
+  .two-thirds        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  .one-quarter       { width:25%; }
+  .two-quarters      { @extend .one-half; }
+  .three-quarters    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  .one-fifth         { width:20%; }
+  .two-fifths        { width:40%; }
+  .three-fifths      { width:60%; }
+  .four-fifths       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  .one-sixth         { width:16.666%; }
+  .two-sixths        { @extend .one-third; }
+  .three-sixths      { @extend .one-half; }
+  .four-sixths       { @extend .two-thirds; }
+  .five-sixths       { width:83.333%; }
+
+}
+
+
+
+/**
+ * Medium Grid
+ */
+@media #{$medium-width} {
+
+  /**
+   * Halves
+   */
+  .one-half\@md          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  .one-third\@md         { width:33.333%; }
+  .two-thirds\@md        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  .one-quarter\@md       { width:25%; }
+  // .two-quarters\@md      { @extend .one-half; }
+  .three-quarters\@md    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  .one-fifth\@md         { width:20%; }
+  .two-fifths\@md        { width:40%; }
+  .three-fifths\@md      { width:60%; }
+  .four-fifths\@md       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  .one-sixth\@md         { width:16.666%; }
+  // .two-sixths\@md        { @extend .one-third; }
+  // .three-sixths\@md      { @extend .one-half; }
+  // .four-sixths\@md       { @extend .two-thirds; }
+  .five-sixths\@md       { width:83.333%; }
+
+}
+
+
+/**
+ * Medium Grid
+ */
+@media #{$small-width} {
+
+  /**
+   * Halves
+   */
+  .one-half\@sm          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  .one-third\@sm         { width:33.333%; }
+  .two-thirds\@sm        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  .one-quarter\@sm       { width:25%; }
+  // .two-quarters\@sm      { @extend .one-half; }
+  .three-quarters\@sm    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  .one-fifth\@sm         { width:20%; }
+  .two-fifths\@sm        { width:40%; }
+  .three-fifths\@sm      { width:60%; }
+  .four-fifths\@sm       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  .one-sixth\@sm         { width:16.666%; }
+  // .two-sixths\@sm        { @extend .one-third; }
+  // .three-sixths\@sm      { @extend .one-half; }
+  // .four-sixths\@sm       { @extend .two-thirds; }
+  .five-sixths\@sm       { width:83.333%; }
+
+}
