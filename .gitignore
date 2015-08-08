@@ -1,8 +1,8 @@
+.gitignore
 .DS_Store
 .sass-cache
 node_modules
 package.json
 css
 package.json
-.gitignore
 gulpfile.js
