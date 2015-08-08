@@ -83,4 +83,4 @@ You can vertically align your grids to each other by simply using the
 ## Help and questions
 
 If you have any trouble setting CBDesigns-Grids up, or would like some help
-using and implementing it (or any questions about how it works) then please feel free to [open an issue](https://github.com/CBdesigns/CBDesigns-Grids/issues/new).
+using and implementing it (or any questions about how it works) please feel free to [open an issue](https://github.com/CBdesigns/CBDesigns-Grids/issues/new).
