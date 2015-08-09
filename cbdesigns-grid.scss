@@ -118,48 +118,41 @@ html {
    COLUMN WIDTHS
    ========================================================================== */
 
+  
+/**
+ * Halves
+ */
+.one-half          { width:50%; }
+
 
 /**
- * Large Grid
+ * Thirds
  */
-@media #{$large-width} {
-  
-  /**
-   * Halves
-   */
-  .one-half          { width:50%; }
+.one-third         { width:33.333%; }
+.two-thirds        { width:66.666%; }
 
 
-  /**
-   * Thirds
-   */
-  .one-third         { width:33.333%; }
-  .two-thirds        { width:66.666%; }
+/**
+ * Quarters
+ */
+.one-quarter       { width:25%; }
+.three-quarters    { width:75%; }
 
 
-  /**
-   * Quarters
-   */
-  .one-quarter       { width:25%; }
-  .three-quarters    { width:75%; }
+/**
+ * Fifths
+ */
+.one-fifth         { width:20%; }
+.two-fifths        { width:40%; }
+.three-fifths      { width:60%; }
+.four-fifths       { width:80%; }
 
 
-  /**
-   * Fifths
-   */
-  .one-fifth         { width:20%; }
-  .two-fifths        { width:40%; }
-  .three-fifths      { width:60%; }
-  .four-fifths       { width:80%; }
-
-
-  /**
-   * Sixths
-   */
-  .one-sixth         { width:16.666%; }
-  .five-sixths       { width:83.333%; }
-
-}
+/**
+ * Sixths
+ */
+.one-sixth         { width:16.666%; }
+.five-sixths       { width:83.333%; }
 
 
 
@@ -167,6 +160,13 @@ html {
  * Medium Grid
  */
 @media #{$medium-width} {
+  
+
+  /**
+   * Whole
+   */
+   .whole\@md            { width: 100%; }
+
 
   /**
    * Halves
@@ -207,9 +207,15 @@ html {
 
 
 /**
- * Medium Grid
+ * Small Grid
  */
 @media #{$small-width} {
+
+  /**
+   * Whole
+   */
+   .whole\@sm            { width: 100%; }
+  
 
   /**
    * Halves
